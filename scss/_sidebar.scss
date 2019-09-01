@@ -1,0 +1,89 @@
+.sidebar {
+  grid-column: side-start / side-end;
+  grid-row: 1 / -1;
+  font-family: $font-primary;
+  font-size: 2rem;
+  background-color: rgba($color-grey-light-1, 1);
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  z-index: 99;
+
+  &_menu {
+    position: relative;
+    width: 5rem;
+    height: 7rem;
+    background-color: $color-primary;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-grey-light-1;
+      border: 1px solid $color-grey-dark-1;
+    }
+  }
+  &_burger {
+    display: block;
+    background-color: $color-grey-dark-1;
+    height: 1.5px;
+    width: 2.2rem;
+    position: absolute;
+    top: 3.5rem;
+    left: 1rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      left: 0rem;
+      height: 1px;
+      width: 2.5rem;
+      background-color: $color-grey-dark-2;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      left: 0rem;
+      height: 1px;
+      width: 3rem;
+      background-color: $color-grey-dark-2;
+    }
+  }
+
+  &_title {
+    width: 40rem;
+    display: block;
+    // text-transform: uppercase;
+    font-family: $font-display;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.4rem;
+    color: $color-grey-light-2;
+    position: absolute;
+    top: 65vh;
+    left: 1rem;
+  }
+
+  &_icons {
+    position: absolute;
+    top: 90vh;
+    left: 1.2rem;
+    .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      fill: $color-grey-dark-1;
+      margin-top: 0.5rem;
+      transition: all 0.3s;
+
+      &:hover {
+        fill: $color-primary;
+      }
+    }
+  }
+}

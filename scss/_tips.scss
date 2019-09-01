@@ -1,0 +1,29 @@
+.tips {
+  grid-column: center-start / center-end;
+
+  //     display: grid;
+  //   grid-template-columns: repeat(9, 1fr);
+  //   grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  align-content: center;
+  height: min-content;
+
+  padding: 10rem 10rem;
+
+  &_heading {
+    text-align: center;
+    font-family: $font-display;
+    font-size: 7rem;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $color-grey-dark-1;
+    opacity: 0.05;
+  }
+
+  & p {
+    column-count: 3;
+    text-align: justify;
+    color: $color-grey-dark-1;
+  }
+}

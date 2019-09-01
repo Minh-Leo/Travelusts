@@ -1,0 +1,60 @@
+.gallery {
+  grid-column: full-start / full-end;
+  grid-row: 3 / 4;
+
+  /* Prevent vertical gaps */
+  -webkit-column-count: 5;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 5;
+  -moz-column-gap: 0px;
+  line-height: 1;
+  column-count: 5;
+  column-gap: 2px;
+
+  h1 {
+    color: $color-secondary-light;
+    column-count: 1;
+    display: block;
+  }
+  img {
+    /* Just in case there are inline attributes */
+    width: 100%;
+    height: auto !important;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: $bp-largest) {
+  .gallery {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+    column-gap: 2px;
+  }
+}
+@media (max-width: $bp-large) {
+  .gallery {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+    column-gap: 2px;
+  }
+}
+@media (max-width: $bp-medium) {
+  .gallery {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    column-gap: 2px;
+  }
+}
+@media (max-width: $bp-smallest) {
+  .gallery {
+    column-count: 1;
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+  }
+}

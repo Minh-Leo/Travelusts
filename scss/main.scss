@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i|Raleway:400,400i,500,500i&display=swap");
+
+@import "base";
+@import "utilities";
+@import "sidebar";
+@import "header";
+@import "story";
+@import "gallery";
+@import "tips";
+@import "contact";
+@import "footer";
+
+.story {
+  background: $color-grey-light-1;
+}
+.gallery {
+  background: $color-grey-light-1;
+}
+.tips {
+  background: $color-grey-light-1;
+}
+.contact {
+  background: linear-gradient(
+    to top,
+    $color-grey-dark-2 97%,
+    $color-grey-dark-1 99%
+  );
+}
+.footer {
+  background: $color-grey-dark-1;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px
+  background: $color-grey-light-1;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%; //8px
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-dark-2;
+  font-weight: 500;
+  line-height: 1.6;
+  position: relative;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh repeat(5, minmax(min-content, max-content));
+  grid-template-columns:
+    [side-start] 5rem [side-end full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr)
+    [full-end];
+}
