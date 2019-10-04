@@ -17,13 +17,60 @@
     display: block;
   }
   img {
-    /* Just in case there are inline attributes */
     width: 100%;
     height: auto !important;
+    transition: 0.3s;
+  }
 
-    &:hover {
-      opacity: 0.7;
+  &_thumb:hover {
+    opacity: 0.7;
+  }
+
+  #modal {
+    display: none;
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-top: 50px;
+    overflow: auto;
+    transition: ease 2s;
+
+    #modal-img {
+      margin: auto;
+      padding: 1vw;
+      max-width: 99vw;
+      animation-name: zoom;
+      animation-duration: 0.6s;
     }
+    #modal-close {
+      position: absolute;
+      top: 10px;
+      right: 48vw;
+      z-index: 100;
+      color: $color-primary;
+      font-size: 5rem;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 

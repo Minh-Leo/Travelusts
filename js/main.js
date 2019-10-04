@@ -57,12 +57,24 @@
 //     slideInterval = setInterval(nextSlide, intervalTime);
 // }
 
-var gallery = document.getElementById("photos");
+let gallery = document.getElementById("photos");
+let modal = document.getElementById("modal");
+let modalClose = document.getElementById("modal-close");
+let modalImg = document.getElementById("modal-img");
 
-for (var i = 0; i < 27; i++) {
-  var e = document.createElement("img");
+for (let i = 0; i < 27; i++) {
+  let e = document.createElement("img");
   e.src = `gallery/thumb/${i}.jpg`;
+  e.setAttribute("class", "gallery_thumb");
+
+  e.onclick = function() {
+    modalImg.src = `gallery/${i}.jpg`;
+    modal.setAttribute("style", "display: block; visibility: visible;");
+  };
 
   gallery.appendChild(e);
-  console.log(i);
 }
+
+modalClose.onclick = function() {
+  modal.setAttribute("style", "display: none; visibility: hidden;");
+};
