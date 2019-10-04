@@ -10,6 +10,13 @@
 @import "contact";
 @import "footer";
 
+.header {
+  background: linear-gradient(
+    to bottom,
+    rgba(42, 42, 42, 1) 99.5%,
+    $color-grey-dark-1
+  );
+}
 .story {
   background: $color-grey-light-1;
 }
@@ -26,6 +33,7 @@
     $color-grey-dark-1 99%
   );
 }
+
 .footer {
   background: $color-grey-dark-1;
 }
@@ -62,6 +70,5 @@ body {
   grid-template-columns:
     [side-start] 5rem [side-end full-start] minmax(6rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-    [center-end] minmax(6rem, 1fr)
-    [full-end];
+    [center-end] minmax(6rem, 1fr) [full-end];
 }

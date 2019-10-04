@@ -1,5 +1,5 @@
 .story {
-  grid-column: full-start / full-end;
+  grid-column: center-start / center-end;
   grid-row: 2 / 3;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
@@ -62,7 +62,7 @@
   position: relative;
 
   &:hover {
-    transform: scale(1.05);
+    transform: translate(-5px, -3px);
     box-shadow: 4px 8px 0.5rem rgba(#000000, 0.3);
   }
 

@@ -57,12 +57,12 @@
 //     slideInterval = setInterval(nextSlide, intervalTime);
 // }
 
-var allImages = "";
 var gallery = document.getElementById("photos");
 
 for (var i = 0; i < 27; i++) {
   var e = document.createElement("img");
-  e.src = `gallery/${i}.jpg`;
+  e.src = `gallery/thumb/${i}.jpg`;
 
   gallery.appendChild(e);
+  console.log(i);
 }
