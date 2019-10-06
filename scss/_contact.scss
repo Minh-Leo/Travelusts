@@ -52,3 +52,10 @@
     }
   }
 }
+
+@media only screen and (max-width: $bp-small) {
+  .contact {
+    flex-direction: column;
+    width: 100%;
+  }
+}

@@ -44,7 +44,7 @@
   }
   &_6 {
     grid-column: 8 / 10;
-    grid-row: 3 / 43;
+    grid-row: 3 / 4;
   }
 }
 
@@ -92,5 +92,38 @@
 
     line-height: 1;
     margin: 1rem 0 0.2rem 0;
+  }
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .story {
+    height: 125rem;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 5rem 10rem;
+
+    &_1 {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+    }
+    &_2 {
+      grid-column: 5 / 7;
+      grid-row: 2 / 3;
+    }
+    &_3 {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+    }
+    &_4 {
+      grid-column: 5 / 7;
+      grid-row: 3 / 4;
+    }
+    &_5 {
+      grid-column: 1 / 3;
+      grid-row: 4 / 5;
+    }
+    &_6 {
+      grid-column: 5 / 7;
+      grid-row: 4 / 5;
+    }
   }
 }

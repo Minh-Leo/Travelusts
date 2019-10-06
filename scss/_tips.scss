@@ -27,3 +27,13 @@
     color: $color-grey-dark-1;
   }
 }
+
+@media only screen and (max-width: $bp-small) {
+  .tips {
+    padding: 5rem 2rem;
+
+    & p {
+      column-count: 2;
+    }
+  }
+}

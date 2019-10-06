@@ -35,7 +35,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 90;
+    z-index: 100;
     padding-top: 50px;
     overflow: auto;
     transition: ease 2s;
@@ -96,8 +96,24 @@
     -moz-column-count: 2;
     column-count: 2;
     column-gap: 2px;
+
+    #modal {
+      width: 100vw;
+      height: 100vh;
+      padding-top: 50px;
+      #modal-img {
+        padding: 01vw;
+        max-width: 100vw;
+      }
+      #modal-close {
+        top: 10px;
+        right: 48vw;
+        cursor: pointer;
+      }
+    }
   }
 }
+
 @media (max-width: $bp-smallest) {
   .gallery {
     -webkit-column-count: 1;
