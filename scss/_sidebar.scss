@@ -30,29 +30,94 @@
   &_burger {
     display: block;
     background-color: $color-grey-dark-1;
-    height: 1.5px;
+    height: 0.1rem;
     width: 2.2rem;
     position: absolute;
     top: 3.5rem;
     left: 1rem;
+    transition: all 0.2s;
 
     &::before {
       content: "";
       position: absolute;
       top: -1rem;
       left: 0rem;
-      height: 1px;
+      height: 0.1rem;
       width: 2.5rem;
       background-color: $color-grey-dark-2;
+      transition: all 0.2s;
     }
     &::after {
       content: "";
       position: absolute;
       top: 1rem;
       left: 0rem;
-      height: 1px;
+      height: 0.1rem;
       width: 3rem;
       background-color: $color-grey-dark-2;
+      transition: all 0.2s;
+    }
+  }
+  .close {
+    .sidebar_burger {
+      width: 2rem;
+      &::before {
+        top: -0.5rem;
+        left: 0.3rem;
+        height: 0.1rem;
+        width: 2rem;
+      }
+      &::after {
+        top: 0.5rem;
+        left: 0.7rem;
+        height: 0.1rem;
+        width: 2rem;
+      }
+    }
+  }
+
+  // toggle menu
+  &_burgerMenu {
+    // display: none;
+    visibility: hidden;
+    width: 10vw;
+    height: 25rem;
+    position: fixed;
+    top: 0;
+    left: 50px;
+    z-index: 98;
+    padding-top: 20px;
+    overflow: auto;
+    opacity: 0;
+    transition: all 0.5s;
+    background-color: rgba($color-grey-dark-2, $alpha: 0.9);
+    clip-path: ellipse(90% 60% at 10% 30%);
+    -webkit-clip-path: ellipse(90% 60% at 10% 30%);
+
+    ul {
+      opacity: 0;
+      transition: all 1s;
+    }
+    li {
+      text-align: left;
+      list-style: none;
+      margin-left: 2rem;
+    }
+    a {
+      text-decoration: none;
+      color: $color-primary;
+      font-family: $font-display;
+      &:hover {
+        color: $color-grey-light-1;
+      }
+    }
+  }
+  .visible {
+    // display: block;
+    visibility: visible;
+    opacity: 1;
+    ul {
+      opacity: 1;
     }
   }
 

@@ -147,11 +147,13 @@
 .sidebar_burger {
   display: block;
   background-color: #5a5560;
-  height: 1.5px;
+  height: 0.1rem;
   width: 2.2rem;
   position: absolute;
   top: 3.5rem;
   left: 1rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .sidebar_burger::before {
@@ -159,9 +161,11 @@
   position: absolute;
   top: -1rem;
   left: 0rem;
-  height: 1px;
+  height: 0.1rem;
   width: 2.5rem;
   background-color: #2d2a30;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .sidebar_burger::after {
@@ -169,9 +173,78 @@
   position: absolute;
   top: 1rem;
   left: 0rem;
-  height: 1px;
+  height: 0.1rem;
   width: 3rem;
   background-color: #2d2a30;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.sidebar .close .sidebar_burger {
+  width: 2rem;
+}
+
+.sidebar .close .sidebar_burger::before {
+  top: -0.5rem;
+  left: 0.3rem;
+  height: 0.1rem;
+  width: 2rem;
+}
+
+.sidebar .close .sidebar_burger::after {
+  top: 0.5rem;
+  left: 0.7rem;
+  height: 0.1rem;
+  width: 2rem;
+}
+
+.sidebar_burgerMenu {
+  visibility: hidden;
+  width: 10vw;
+  height: 25rem;
+  position: fixed;
+  top: 0;
+  left: 50px;
+  z-index: 98;
+  padding-top: 20px;
+  overflow: auto;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: rgba(45, 42, 48, 0.9);
+  clip-path: ellipse(90% 60% at 10% 30%);
+  -webkit-clip-path: ellipse(90% 60% at 10% 30%);
+}
+
+.sidebar_burgerMenu ul {
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.sidebar_burgerMenu li {
+  text-align: left;
+  list-style: none;
+  margin-left: 2rem;
+}
+
+.sidebar_burgerMenu a {
+  text-decoration: none;
+  color: #faed26;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.sidebar_burgerMenu a:hover {
+  color: #f5f3f3;
+}
+
+.sidebar .visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sidebar .visible ul {
+  opacity: 1;
 }
 
 .sidebar_title {
@@ -585,7 +658,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 90;
   padding-top: 50px;
   overflow: auto;
   -webkit-transition: ease 2s;
@@ -606,7 +679,7 @@
   position: absolute;
   top: 10px;
   right: 48vw;
-  z-index: 100;
+  z-index: 91;
   color: #faed26;
   font-size: 5rem;
   cursor: pointer;
