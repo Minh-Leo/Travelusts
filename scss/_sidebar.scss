@@ -80,8 +80,8 @@
   &_burgerMenu {
     // display: none;
     visibility: hidden;
-    width: 10vw;
-    height: 25rem;
+    width: 15vw;
+    height: 30rem;
     position: fixed;
     top: 0;
     left: 50px;
@@ -153,20 +153,31 @@
   }
 }
 
+@media only screen and (max-width: $bp-large) {
+  .sidebar {
+    &_burgerMenu {
+      width: 15vw;
+      height: 30rem;
+      top: 0;
+      left: 40px;
+    }
+  }
+}
+
 @media only screen and (max-width: $bp-medium) {
   .sidebar {
     grid-column: full-start / full-end;
     grid-row: 1 / 2;
     background-color: transparent;
-    width: 100vw;
-    height: 20vh;
+    width: 80vw;
+    height: 9rem;
 
     &_menu {
       position: fixed;
       top: 0;
-      left: 200px;
+      left: 65%;
       width: 7rem;
-      height: 9rem;
+      height: 8rem;
       box-shadow: 2px 5px 0.5rem rgba(#000000, 0.2);
     }
 
@@ -175,26 +186,29 @@
       top: 5rem;
       left: 1.5rem;
       &::before {
-        top: -1.5rem;
+        top: -1rem;
         left: 0rem;
         width: 3.5rem;
       }
       &::after {
-        top: 1.5rem;
+        top: 1rem;
         left: 0rem;
         width: 4rem;
       }
     }
 
     &_burgerMenu {
-      width: 18rem;
-      height: 65rem;
-      left: 20px;
+      width: 100vw;
+      height: 40rem;
+      top: 7rem;
+      left: 0;
+      clip-path: none;
       li {
-        margin-bottom: 7rem;
+        text-align: center;
+        margin-bottom: 3rem;
       }
       a {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
     }
 
@@ -204,29 +218,20 @@
 
     &_icons {
       display: none;
-      // width: 12rem;
-      // position: fixed;
-      // top: 0;
-      // left: 32rem;
-      // margin-left: 0.5rem;
-      // .icon {
-      //   width: 2.5rem;
-      //   height: 2.5rem;
-      //   fill: $color-primary;
-      //   margin: 0.5rem;
-
-      //   &:hover {
-      //     fill: $color-grey-light-1;
-      //   }
-      // }
     }
   }
 }
-
+@media only screen and (max-width: $bp-small) {
+  .sidebar {
+    &_menu {
+      left: 60%;
+    }
+  }
+}
 @media only screen and (max-width: $bp-smallest) {
   .sidebar {
     &_menu {
-      left: 200px;
+      left: 55%;
     }
   }
 }

@@ -114,10 +114,19 @@
   }
 }
 
-@media (max-width: $bp-smallest) {
+@media (max-width: $bp-small) {
   .gallery {
+    width: 500px;
     -webkit-column-count: 1;
     -moz-column-count: 1;
     column-count: 1;
+    h1 {
+      margin-left: 2rem;
+    }
+  }
+}
+@media (max-width: $bp-smallest) {
+  .gallery {
+    width: 400px;
   }
 }

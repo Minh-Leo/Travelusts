@@ -89,3 +89,9 @@ body {
       [center-end full-end];
   }
 }
+
+@media only screen and (max-width: $bp-smallest) {
+  .container {
+    width: 400px;
+  }
+}

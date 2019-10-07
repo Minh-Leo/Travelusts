@@ -55,7 +55,14 @@
 
 @media only screen and (max-width: $bp-small) {
   .contact {
+    width: 500px;
+
     flex-direction: column;
-    width: 100%;
+  }
+}
+
+@media only screen and (max-width: $bp-smallest) {
+  .contact {
+    width: 400px;
   }
 }

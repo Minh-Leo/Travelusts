@@ -1,6 +1,5 @@
 .tips {
   grid-column: center-start / center-end;
-
   //     display: grid;
   //   grid-template-columns: repeat(9, 1fr);
   //   grid-template-rows: repeat(3, 1fr);
@@ -18,7 +17,7 @@
     font-weight: 700;
     line-height: 1.2;
     color: $color-grey-dark-1;
-    opacity: 0.05;
+    opacity: 0.1;
   }
 
   & p {
@@ -28,12 +27,31 @@
   }
 }
 
-@media only screen and (max-width: $bp-small) {
+@media only screen and (max-width: $bp-medium) {
   .tips {
-    padding: 5rem 2rem;
-
+    &_heading {
+      font-size: 4rem;
+      line-height: 1.1;
+    }
     & p {
       column-count: 2;
     }
+  }
+}
+
+@media only screen and (max-width: $bp-small) {
+  .tips {
+    padding: 3rem 2rem;
+    width: 500px;
+
+    & p {
+      column-count: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-smallest) {
+  .tips {
+    width: 400px;
   }
 }
