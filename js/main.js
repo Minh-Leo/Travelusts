@@ -43,7 +43,7 @@ card1.onclick = function() {
   // modalStImg.src = "gallery/thumb/ex.jpg";
   modalSt.setAttribute("style", "display: block; visibility: visible;");
   modalStTitle.innerText = stories[0].title;
-  modalStText.innerText = stories[0].text;
+  modalStText.innerHTML = stories[0].text;
   for (let i = 0; i < 7; i++) {
     let pict = document.createElement("img");
     pict.src = `stories-img/1/${i}.jpg`;

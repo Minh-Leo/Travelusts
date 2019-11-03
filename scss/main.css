@@ -735,8 +735,12 @@
   z-index: 100;
   padding-top: 20px;
   overflow: auto;
-  -webkit-transition: ease 2s;
-  transition: ease 2s;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 
 .story #modal-story #modal-story-title {
@@ -751,9 +755,10 @@
   color: white;
   font-family: "Raleway", sans-serif;
   font-size: 1.4rem;
-  text-align: center;
+  text-align: justify;
+  text-justify: inter-word;
   margin: auto;
-  padding: 20px 10px 20px 10px;
+  padding: 30px 10px 60px 10px;
   max-width: 800px;
 }
 
@@ -1039,15 +1044,15 @@
   visibility: hidden;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   padding-top: 50px;
   overflow: auto;
-  -webkit-transition: ease 2s;
-  transition: ease 2s;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
 }
 
 .gallery #modal #modal-img {
@@ -1073,8 +1078,9 @@
 }
 
 .gallery #modal #modal-close:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1.7);
+          transform: scale(1.7);
+  color: white;
 }
 
 @-webkit-keyframes zoom {
