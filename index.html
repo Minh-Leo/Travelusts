@@ -24,7 +24,9 @@
         </ul>
       </div>
 
-      <h3 class="sidebar_title rotate">Turkey | From Europe to Asia</h3>
+      <h3 id="sidebar_title" class="sidebar_title rotate">
+        Turkey | From Europe to Asia
+      </h3>
 
       <div class="sidebar_icons">
         <svg class="icon icon-facebook2">
@@ -100,14 +102,22 @@
     <!-- STORY -->
     <section class="story" id="story">
       <h2 class="story_heading">Travelling Journal</h2>
-      <div class="story_1 card">
-        <div class="card_title rotate">The city of thousand mosques</div>
+
+      <div id="modal-story">
+        <h2 id="modal-story-title"></h2>
+        <div id="modal-story-img"></div>
+        <p id="modal-story-text"></p>
+        <span id="modal-story-close"> &times; </span>
+      </div>
+
+      <div id="card-1" class="story_1 card">
+        <div class="card_title rotate">Weekend at Adelaide Central Market</div>
         <img class="card_img" src="img/card1.jpg" alt="" />
         <div class="card_description">
           <h2 class="card_text">
-            Where time has stood still since a thousand years
+            How to spend a gloomy Saturday morning at the Market!
           </h2>
-          <a href="" class="btn_a tx-dark">Read more &rarr;</a>
+          <a href="#story" class="btn_a tx-dark">Read more &rarr;</a>
         </div>
       </div>
       <div class="story_2 card">
@@ -117,7 +127,7 @@
           <h2 class="card_text">
             Where time has stood still since a thousand years
           </h2>
-          <a href="" class="btn_a tx-dark">Read more &rarr;</a>
+          <a href="#story" class="btn_a tx-dark">Read more &rarr;</a>
         </div>
       </div>
       <div class="story_3 card">
@@ -127,7 +137,7 @@
           <h2 class="card_text">
             Where time has stood still since a thousand years
           </h2>
-          <a href="" class="btn_a tx-dark">Read more &rarr;</a>
+          <a href="#story" class="btn_a tx-dark">Read more &rarr;</a>
         </div>
       </div>
       <div class="story_4 card">
@@ -137,7 +147,7 @@
           <h2 class="card_text">
             Where time has stood still since a thousand years
           </h2>
-          <a href="" class="btn_a tx-dark">Read more &rarr;</a>
+          <a href="#story" class="btn_a tx-dark">Read more &rarr;</a>
         </div>
       </div>
       <div class="story_5 card">
@@ -147,7 +157,7 @@
           <h2 class="card_text">
             Where time has stood still since a thousand years
           </h2>
-          <a href="" class="btn_a tx-dark">Read more &rarr;</a>
+          <a href="#story" class="btn_a tx-dark">Read more &rarr;</a>
         </div>
       </div>
       <div class="story_6 card">
@@ -157,7 +167,7 @@
           <h2 class="card_text">
             Where time has stood still since a thousand years
           </h2>
-          <a href="" class="btn_a tx-dark">Read more &rarr;</a>
+          <a href="#story" class="btn_a tx-dark">Read more &rarr;</a>
         </div>
       </div>
     </section>
@@ -295,9 +305,10 @@
     </section>
 
     <footer class="footer">
-      <p>Copyright &copy; Minh.Bui Studio, Sydney - 2019</p>
+      <p>Copyright &copy; Minh.Bui Studio, Australia - 2019</p>
     </footer>
 
+    <script src="js/stories.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
