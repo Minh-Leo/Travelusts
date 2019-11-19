@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="scss/main.css" />
-    <title>Travelusts</title>
+    <title>The Travelusts</title>
   </head>
 
   <body class="container">
@@ -110,7 +110,7 @@
         <span id="modal-story-close"> &times; </span>
       </div>
 
-      <div id="card-1" class="story_1 card">
+      <div id="card-1" class="story_1 card" onclick="getStory(0)">
         <div class="card_title rotate">Weekend at Adelaide Central Market</div>
         <img class="card_img" src="img/card1.jpg" alt="" />
         <div class="card_description">
@@ -120,12 +120,12 @@
           <a href="#story" class="btn_a tx-dark">Read more &rarr;</a>
         </div>
       </div>
-      <div class="story_2 card">
-        <div class="card_title rotate">The city of thousand mosques</div>
+      <div id="card-2" class="story_2 card" onclick="getStory(1)">
+        <div class="card_title rotate">Istanbul's Night</div>
         <img class="card_img" src="img/card2.jpg" alt="" />
         <div class="card_description">
           <h2 class="card_text">
-            Where time has stood still since a thousand years
+            When streetlight goes up and the people goes out.
           </h2>
           <a href="#story" class="btn_a tx-dark">Read more &rarr;</a>
         </div>

@@ -7,6 +7,7 @@ let menu = document.getElementById("burger");
 let burgerMenu = document.getElementById("burgerMenu");
 let sidebarTitle = document.getElementById("sidebar_title");
 
+// Gallery
 for (let i = 0; i < 27; i++) {
   let e = document.createElement("img");
   e.src = `gallery/thumb/${i}.jpg`;
@@ -39,18 +40,20 @@ let modalStTitle = document.getElementById("modal-story-title");
 let modalStText = document.getElementById("modal-story-text");
 let modalStImg = document.getElementById("modal-story-img");
 
-card1.onclick = function() {
+var getStory = n => {
   // modalStImg.src = "gallery/thumb/ex.jpg";
   modalSt.setAttribute("style", "display: block; visibility: visible;");
-  modalStTitle.innerText = stories[0].title;
-  modalStText.innerHTML = stories[0].text;
-  for (let i = 0; i < 7; i++) {
+  modalStTitle.innerText = stories[n].title;
+  modalStText.innerHTML = stories[n].text;
+  modalStText.style.fontStyle = "italic";
+  for (let i = 0; i < stories[n].img.length; i++) {
     let pict = document.createElement("img");
-    pict.src = `stories-img/1/${i}.jpg`;
+    pict.src = `stories-img/${stories[n].id}/${i}.jpg`;
 
     modalStImg.appendChild(pict);
   }
 };
+// card1.onclick = getStory(0);
 
 modalStClose.onclick = function() {
   modalSt.setAttribute("style", "display: none; visibility: hidden;");
