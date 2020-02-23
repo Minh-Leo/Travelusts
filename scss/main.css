@@ -1239,6 +1239,7 @@
 
 .videos-container iframe {
   margin-bottom: 4rem;
+  width: 100%;
 }
 
 @media only screen and (max-width: 50em) {
@@ -1268,10 +1269,10 @@
 
 @media only screen and (max-width: 26em) {
   .tips {
-    width: 400px;
+    width: 375px;
   }
   .videos-container {
-    width: 380px;
+    width: 370px;
   }
 }
 
