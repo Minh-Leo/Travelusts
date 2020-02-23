@@ -38,7 +38,7 @@
     transition: all 0.2s;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: -1rem;
       left: 0rem;
@@ -48,7 +48,7 @@
       transition: all 0.2s;
     }
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 1rem;
       left: 0rem;
@@ -137,7 +137,7 @@
 
   &_icons {
     position: absolute;
-    top: 90vh;
+    top: 88vh;
     left: 1.2rem;
     .icon {
       width: 2.5rem;

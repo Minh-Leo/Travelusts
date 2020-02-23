@@ -171,7 +171,7 @@
 }
 
 .sidebar_burger::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -1rem;
   left: 0rem;
@@ -183,7 +183,7 @@
 }
 
 .sidebar_burger::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 1rem;
   left: 0rem;
@@ -276,7 +276,7 @@
 
 .sidebar_icons {
   position: absolute;
-  top: 90vh;
+  top: 88vh;
   left: 1.2rem;
 }
 
@@ -415,7 +415,7 @@
 }
 
 .nav_link::after {
-  content: "";
+  content: '';
   height: 1px;
   width: 0%;
   background-color: white;
@@ -1203,7 +1203,7 @@
 .tips_heading {
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 7rem;
+  font-size: 5rem;
   font-style: italic;
   font-weight: 700;
   line-height: 1.2;
@@ -1214,7 +1214,8 @@
 .tips p {
   -webkit-column-count: 1;
           column-count: 1;
-  text-align: justify;
+  text-align: center;
+  font-style: italic;
   color: #5a5560;
 }
 
@@ -1242,7 +1243,7 @@
 
 @media only screen and (max-width: 50em) {
   .tips_heading {
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1.1;
   }
   .tips p {
