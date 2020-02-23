@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i|Raleway:400,400i,500,500i&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,700,700i|Raleway:400,400i,500,500i&display=swap');
 
-@import "base";
-@import "utilities";
-@import "sidebar";
-@import "header";
-@import "story";
-@import "gallery";
-@import "tips";
-@import "contact";
-@import "footer";
+@import 'base';
+@import 'utilities';
+@import 'sidebar';
+@import 'header';
+@import 'story';
+@import 'gallery';
+@import 'tips';
+@import 'contact';
+@import 'footer';
 
 .header {
   background: linear-gradient(
